@@ -1,17 +1,1 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-
-:root {
-    /* Background Colors */
-    --color-bg-primary: #FBF7EF;   /* (251, 247, 239) */
-    --color-bg-secondary: #F9F5EB; /* (249, 245, 235) */
-    --color-bg-tertiary: #F8F3E7;  /* (248, 243, 231) */
-    --color-bg-alt: #EDE9E1;       /* (237, 233, 225) */
-  
-    /* Text Colors */
-    --color-text-dark: #000000;    /* Primary black text */
-    --color-text-light: #212121;   /* Slightly lighter used in headings or muted text */
-  
-    /* Accent / Brand Colors */
-    --color-accent-orange: #000000; /* Note: This is unexpectedly black — likely the button text, not background */
-  }
-  

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="inset-0 bg-black/10 py-20 md:py-32 lg:py-48 transition-colors duration-300">
+    <section id="home" className="inset-0 bg-black/10 py-20 md:py-32 lg:py-48 transition-colors duration-300">
       <div className="max-w-full mx-auto px-3 sm:px-6 py-28 lg:px-8 sm:py-52 md:py-40 lg:py-24 h-full flex items-center">
         <div className="text-center w-full">
           <motion.h1 

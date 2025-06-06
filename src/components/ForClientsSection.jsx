@@ -72,7 +72,7 @@ const ForClientsSection = () => {
   };
 
   return (
-    <section className="py-20 bg-bg-primary">
+    <section className="py-20 bg-bg-primary" id="clients">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Heading */}
         <motion.div 

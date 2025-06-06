@@ -8,6 +8,12 @@ const Header = () => {
   const [showWaitlist, setShowWaitlist] = useState(false);
   const navigate = useNavigate();
 
+  const navItems = [
+    { label: "Home", href: "#home" },
+    { label: "For Clients", href: "#clients" },
+    { label: "About", href: "#about" },
+  ];
+
   return (
     <motion.header className="w-full bg-white/75 border-b border-gray-100 sticky top-0 z-50 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,12 +28,12 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {["Home", "For Clients", "For Consultants"].map((item) => (
-              <a key={item} href="#" className="text-gray-600 hover:text-gray-900">
-                {item}
-              </a>
-            ))}
-          </nav>
+  {navItems.map((item) => (
+    <a key={item.label} href={item.href} className="text-gray-600 hover:text-gray-900">
+      {item.label}
+    </a>
+  ))}
+</nav>
 
           {/* Right side buttons */}
           <div className="flex items-center space-x-4">

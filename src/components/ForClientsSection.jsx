@@ -72,7 +72,7 @@ const ForClientsSection = () => {
   };
 
   return (
-    <section className="py-20 bg-bg-primary" id="clients">
+    <section className="py-20 bg-bg-primary dark:bg-[#212121]" id="clients">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -81,8 +81,8 @@ const ForClientsSection = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-custom-xl font-montserrat font-bold text-text-dark mb-4">FOR CLIENTS</h2>
-          <p className="text-custom-base font-system text-text-light max-w-3xl mx-auto">
+          <h2 className="text-custom-xl font-montserrat font-bold text-text-dark dark:text-white mb-4">FOR CLIENTS</h2>
+          <p className="text-custom-base font-system text-text-light dark:text-gray-200 max-w-3xl mx-auto">
             Find Your Ideal Consultant, Faster. Leverage AI to connect with vetted experts perfectly matched to your project needs.
           </p>
         </motion.div>
@@ -90,7 +90,7 @@ const ForClientsSection = () => {
         {/* Features Grid - Square Cards */}
         <div className="mb-16">
           <motion.h3 
-            className="text-2xl font-montserrat font-semibold text-text-dark mb-8 text-center"
+            className="text-2xl font-montserrat font-semibold text-text-dark dark:text-white mb-8 text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -107,7 +107,7 @@ const ForClientsSection = () => {
           >
             {features.map((feature, index) => (
               <motion.div key={index} variants={cardVariants}>
-                <div className="rounded-lg border-0 shadow-md hover:shadow-lg transition-shadow bg-bg-secondary p-6 text-center h-full">
+                <div className="rounded-lg border-0 shadow-md hover:shadow-lg transition-shadow bg-bg-secondary dark:bg-[#242320] p-6 text-center h-full">
                   <motion.div 
                     className="flex justify-center mb-4"
                     whileHover={{ scale: 1.1 }}
@@ -115,8 +115,8 @@ const ForClientsSection = () => {
                   >
                     {feature.icon}
                   </motion.div>
-                  <h4 className="text-lg font-montserrat font-semibold text-text-dark mb-3">{feature.title}</h4>
-                  <p className="text-text-light font-system text-sm leading-relaxed">{feature.description}</p>
+                  <h4 className="text-lg font-montserrat font-semibold text-text-dark dark:text-white mb-3">{feature.title}</h4>
+                  <p className="text-text-light dark:text-gray-200 font-system text-sm leading-relaxed">{feature.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -126,7 +126,7 @@ const ForClientsSection = () => {
         {/* Platform Features - Rectangular Cards */}
         <div className="mb-16">
           <motion.h3 
-            className="text-2xl font-montserrat font-semibold text-text-dark mb-8 text-center"
+            className="text-2xl font-montserrat font-semibold text-text-dark dark:text-white mb-8 text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -143,7 +143,7 @@ const ForClientsSection = () => {
           >
             {platformFeatures.map((feature, index) => (
               <motion.div key={index} variants={cardVariants} className="h-full">
-                <div className="rounded-lg border-0 shadow-md hover:shadow-lg transition-shadow bg-bg-tertiary p-4 h-full flex items-start gap-3">
+                <div className="rounded-lg border-0 shadow-md hover:shadow-lg transition-shadow bg-bg-tertiary dark:bg-[#242320] p-4 h-full flex items-start gap-3">
                   <motion.div
                     whileHover={{ scale: 1.1 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -152,10 +152,10 @@ const ForClientsSection = () => {
                     {feature.icon}
                   </motion.div>
                   <div>
-                    <h4 className="text-lg font-montserrat font-semibold text-text-dark mb-2">
+                    <h4 className="text-lg font-montserrat font-semibold text-text-dark dark:text-white mb-2">
                       {feature.title}
                     </h4>
-                    <p className="text-text-light font-system text-sm leading-relaxed">
+                    <p className="text-text-light dark:text-gray-200 font-system text-sm leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
@@ -173,8 +173,8 @@ const ForClientsSection = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-2xl font-montserrat font-semibold text-text-dark mb-4">READY TO FIND YOUR PERFECT CONSULTANT?</h3>
-          <p className="text-custom-base font-system text-text-light max-w-3xl mx-auto mb-6">
+          <h3 className="text-2xl font-montserrat font-semibold text-text-dark dark:text-white mb-4">READY TO FIND YOUR PERFECT CONSULTANT?</h3>
+          <p className="text-custom-base font-system text-text-light dark:text-gray-200 max-w-3xl mx-auto mb-6">
             Post your project today and let our AI connect you with the expertise you need.
           </p>
           <button className="bg-accent-orange text-white font-montserrat font-medium px-6 py-3 rounded-md hover:bg-opacity-90 transition-colors">

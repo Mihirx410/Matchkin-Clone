@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -28,6 +29,14 @@ export default {
         accent: {
           orange: '#FF6A00',
         },
+        dark: {
+          DEFAULT: '#212121',
+          lighter: '#242320',
+          light: '#242321',
+          medium: '#27251f',
+          dark: '#2e2d2a',
+          darker: '#202020',
+        }
       },
     },
   },

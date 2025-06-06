@@ -3,10 +3,10 @@ import { Instagram, Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-orange-50 text-white py-8">
+    <footer className="bg-orange-50 dark:bg-[#242320] text-white py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <p className="text-black text-sm mb-4 md:mb-0">
+          <p className="text-black dark:text-white text-sm mb-4 md:mb-0">
             © 2025 Matchkin Built By <span className="font-bold">Mihir.</span>
           </p>
           
@@ -16,7 +16,7 @@ const Footer = () => {
                 <motion.a
                   key={item}
                   href="#"
-                  className="text-black hover:text-orange-500 text-sm transition-colors"
+                  className="text-black dark:text-white hover:text-orange-500 text-sm transition-colors"
                   whileHover={{ y: -2 }}
                 >
                   {item}
@@ -29,21 +29,21 @@ const Footer = () => {
             <div className="flex space-x-4">
               <motion.a 
                 href="#" 
-                className="text-black hover:text-orange-500"
+                className="text-black dark:text-white hover:text-orange-500"
                 whileHover={{ y: -3, scale: 1.1 }}
               >
                 <Instagram size={18} />
               </motion.a>
               <motion.a 
                 href="#" 
-                className="text-black hover:text-orange-500"
+                className="text-black dark:text-white hover:text-orange-500"
                 whileHover={{ y: -3, scale: 1.1 }}
               >
                 <Linkedin size={18} />
               </motion.a>
               <motion.a 
                 href="#" 
-                className="text-black hover:text-orange-500"
+                className="text-black dark:text-white hover:text-orange-500"
                 whileHover={{ y: -3, scale: 1.1 }}
               >
                 <Twitter size={18} />

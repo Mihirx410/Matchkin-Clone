@@ -48,7 +48,7 @@ const About = () => {
   };
 
   return (
-    <section className="py-20 bg-white" id="about">
+    <section className="py-20 bg-white dark:bg-[#212121]" id="about">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -57,15 +57,15 @@ const About = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 font-montserrat capitalize">ABOUT US</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-system">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4 font-montserrat capitalize">ABOUT US</h2>
+          <p className="text-xl text-gray-600 dark:text-gray-200 max-w-3xl mx-auto font-system">
             A simple, efficient process that connects clients with the right consultants
           </p>
         </motion.div>
 
         <div className="mb-20">
           <motion.h3 
-            className="text-2xl font-semibold text-gray-900 mb-12 text-center font-montserrat"
+            className="text-2xl font-semibold text-gray-900 dark:text-white mb-12 text-center font-montserrat"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -82,7 +82,7 @@ const About = () => {
           >
             {clientSteps.map((step, index) => (
               <motion.div key={index} variants={cardVariants}>
-                <div className="border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow relative bg-white group">
+                <div className="border-gray-200 dark:border-gray-700 rounded-lg shadow-sm hover:shadow-md transition-shadow relative bg-white dark:bg-[#242320] group">
                   <div className="p-6 text-center">
                     <motion.div 
                       className="flex justify-center mb-4"
@@ -92,12 +92,12 @@ const About = () => {
                       {step.icon}
                     </motion.div>
                     <div className="text-orange-500 font-bold text-sm mb-2 font-system">{step.step}</div>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3 font-montserrat">{step.title}</h4>
-                    <p className="text-gray-600 text-sm leading-relaxed font-system">{step.description}</p>
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 font-montserrat">{step.title}</h4>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed font-system">{step.description}</p>
                   </div>
                   {index < clientSteps.length - 1 && (
                     <motion.div 
-                      className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-orange-200"
+                      className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-orange-200 dark:bg-orange-800"
                       initial={{ scaleX: 0 }}
                       whileInView={{ scaleX: 1 }}
                       viewport={{ once: true }}
@@ -111,13 +111,13 @@ const About = () => {
         </div>
 
         <motion.div 
-          className="bg-orange-50/50 rounded-2xl p-8 lg:p-12"
+          className="bg-orange-50/50 dark:bg-orange-900/20 rounded-2xl p-8 lg:p-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-2xl font-semibold text-gray-900 mb-8 text-center font-montserrat">THE POWER OF AI MATCHING</h3>
+          <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8 text-center font-montserrat">THE POWER OF AI MATCHING</h3>
           <div className="flex flex-col lg:flex-row items-center justify-center space-y-8 lg:space-y-0 lg:space-x-12">
             <motion.div 
               className="text-center"
@@ -127,13 +127,13 @@ const About = () => {
               transition={{ duration: 0.6 }}
             >
               <motion.div 
-                className="w-32 h-32 bg-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto"
+                className="w-32 h-32 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mb-4 mx-auto"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
                 <Search className="w-16 h-16 text-orange-500" />
               </motion.div>
-              <h4 className="font-semibold text-gray-900 font-montserrat">Project Requirements</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white font-montserrat">Project Requirements</h4>
             </motion.div>
             
             <motion.div 
@@ -143,7 +143,7 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <div className="w-16 h-0.5 bg-orange-300 hidden lg:block"></div>
+              <div className="w-16 h-0.5 bg-orange-300 dark:bg-orange-700 hidden lg:block"></div>
               <motion.div 
                 className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center mx-4"
                 animate={{ rotate: 360 }}
@@ -151,7 +151,7 @@ const About = () => {
               >
                 <div className="w-4 h-4 bg-white rounded-full"></div>
               </motion.div>
-              <div className="w-16 h-0.5 bg-orange-300 hidden lg:block"></div>
+              <div className="w-16 h-0.5 bg-orange-300 dark:bg-orange-700 hidden lg:block"></div>
             </motion.div>
             
             <motion.div 
@@ -162,18 +162,18 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <motion.div 
-                className="w-32 h-32 bg-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto"
+                className="w-32 h-32 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center mb-4 mx-auto"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
               >
                 <UserCheck className="w-16 h-16 text-orange-500" />
               </motion.div>
-              <h4 className="font-semibold text-gray-900 font-montserrat">Perfect Consultant Match</h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white font-montserrat">Perfect Consultant Match</h4>
             </motion.div>
           </div>
           
           <motion.p 
-            className="text-center text-gray-600 mt-8 max-w-2xl mx-auto font-system"
+            className="text-center text-gray-600 dark:text-gray-200 mt-8 max-w-2xl mx-auto font-system"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

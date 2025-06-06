@@ -1,21 +1,25 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import WaitlistFlow from "./Waitlist";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showWaitlist, setShowWaitlist] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <motion.header className="w-full bg-white/75 border-b border-gray-100 sticky top-0 z-50 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Brand */}
-          <motion.div 
+          <motion.div
             className="flex items-center"
             whileHover={{ scale: 1.05 }}
           >
             <div className="text-2xl font-bold text-gray-900">MatchKin</div>
           </motion.div>
-          
+
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {["Home", "For Clients", "For Consultants"].map((item) => (
@@ -28,9 +32,14 @@ const Header = () => {
           {/* Right side buttons */}
           <div className="flex items-center space-x-4">
             <div className="hidden sm:flex space-x-4">
-              <button className="bg-orange-400 px-4 py-2 rounded-md">Join Us</button>
+              <button
+                onClick={() => navigate('/join')}
+                className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg"
+              >
+                Join Now
+              </button>
             </div>
-            
+
             {/* Mobile Menu Button */}
             <button
               className="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none"
@@ -61,13 +70,13 @@ const Header = () => {
               className="fixed inset-0 bg-black z-40 md:hidden"
               onClick={() => setIsOpen(false)}
             />
-            
-            {/* Full-screen Sidebar */}
+
+            {/* Sidebar */}
             <motion.div
-              initial={{ x: '100%' }}
+              initial={{ x: "100%" }}
               animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'tween' }}
+              exit={{ x: "100%" }}
+              transition={{ type: "tween" }}
               className="fixed top-0 right-0 h-screen w-64 max-w-md bg-white shadow-lg z-50 flex flex-col"
             >
               <div className="p-4 flex justify-end">
@@ -93,17 +102,18 @@ const Header = () => {
                     {item}
                   </a>
                 ))}
-                 <button className="w-full bg-red-200 px-4 py-3 rounded-lg text-lg font-medium">
-                  Sign In
+
+                <button
+                  onClick={() => setShowWaitlist(!showWaitlist)}
+                  className="bg-orange-400 px-4 py-2 rounded-md w-full"
+                >
+                  Join Us
                 </button>
-                <button className="w-full bg-red-200 px-4 py-3 rounded-lg text-lg font-medium">
-                  Get Started
-                </button>
+
+                {showWaitlist && <WaitlistFlow />}
               </nav>
 
-              <div className="p-4 space-y-4 border-t border-gray-200">
-               
-              </div>
+              <div className="p-4 border-t border-gray-200"></div>
             </motion.div>
           </>
         )}

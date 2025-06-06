@@ -205,7 +205,7 @@ const WaitlistPage = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number(optional)</label>
                   <input
                     type="tel"
                     name="phone"
@@ -277,7 +277,7 @@ const WaitlistPage = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Typical Project Types</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Typical Project Types(optional)</label>
                   <input
                     type="text"
                     name="projectTypes"
@@ -289,7 +289,7 @@ const WaitlistPage = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Brief Company Description</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Brief Company Description(optional)</label>
                   <textarea
                     name="companyDescription"
                     value={formData.companyDescription}
@@ -356,7 +356,7 @@ const WaitlistPage = () => {
                 </div>
 
                 <div>
-                  <h3 className="font-medium text-gray-900 mb-2">Typical Project Timeline</h3>
+                  <h3 className="font-medium text-gray-900 mb-2">Typical Project Timeline(optional)</h3>
                   <select
                     name="timeline"
                     value={formData.timeline}
@@ -371,7 +371,7 @@ const WaitlistPage = () => {
                 </div>
 
                 <div>
-                  <h3 className="font-medium text-gray-900 mb-2">How did you hear about us?</h3>
+                  <h3 className="font-medium text-gray-900 mb-2">How did you hear about us?(optional)</h3>
                   <select
                     name="heardAboutUs"
                     value={formData.heardAboutUs}

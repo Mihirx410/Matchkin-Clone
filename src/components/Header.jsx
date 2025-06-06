@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [showWaitlist, setShowWaitlist] = useState(false);
   const navigate = useNavigate();
 
   const navItems = [
@@ -98,26 +97,26 @@ const Header = () => {
               </div>
 
               <nav className="flex-1 px-4 space-y-4">
-                {["Home", "For Clients", "For Consultants"].map((item) => (
+                {navItems.map((item) => (
                   <a
                     key={item}
-                    href="#"
+                    href={item.href}
                     className="block px-4 py-3 text-xl font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg"
                     onClick={() => setIsOpen(false)}
                   >
-                    {item}
+                    {item.label}
                   </a>
                 ))}
 
                 <button
-                  onClick={() => setShowWaitlist(!showWaitlist)}
+                  
+                onClick={() => navigate('/join')}
                   className="bg-orange-400 px-4 py-2 rounded-md w-full"
                 >
                   Join Us
                 </button>
-
-                {showWaitlist && <WaitlistFlow />}
               </nav>
+
 
               <div className="p-4 border-t border-gray-200"></div>
             </motion.div>

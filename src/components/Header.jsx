@@ -28,8 +28,7 @@ const Header = () => {
           {/* Right side buttons */}
           <div className="flex items-center space-x-4">
             <div className="hidden sm:flex space-x-4">
-              <button className="bg-red-200 px-4 py-2 rounded-md">Sign In</button>
-              <button className="bg-red-200 px-4 py-2 rounded-md">Get Started</button>
+              <button className="bg-orange-400 px-4 py-2 rounded-md">Join Us</button>
             </div>
             
             {/* Mobile Menu Button */}

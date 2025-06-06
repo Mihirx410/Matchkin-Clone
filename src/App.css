@@ -1,42 +1,15 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+:root {
+    /* Background Colors */
+    --color-bg-primary: #FBF7EF;   /* (251, 247, 239) */
+    --color-bg-secondary: #F9F5EB; /* (249, 245, 235) */
+    --color-bg-tertiary: #F8F3E7;  /* (248, 243, 231) */
+    --color-bg-alt: #EDE9E1;       /* (237, 233, 225) */
+  
+    /* Text Colors */
+    --color-text-dark: #000000;    /* Primary black text */
+    --color-text-light: #212121;   /* Slightly lighter used in headings or muted text */
+  
+    /* Accent / Brand Colors */
+    --color-accent-orange: #000000; /* Note: This is unexpectedly black — likely the button text, not background */
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+  

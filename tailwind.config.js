@@ -6,6 +6,14 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+        system: ['ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
+      fontSize: {
+        'custom-xl': ['37px'],  
+        'custom-base': ['18px'],
+      },
       colors: {
         bg: {
           primary: '#FBF7EF',

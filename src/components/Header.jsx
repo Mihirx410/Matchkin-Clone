@@ -5,7 +5,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <motion.header className="w-full bg-white/95 border-b border-gray-100 sticky top-0 z-50 backdrop-blur-sm">
+    <motion.header className="w-full bg-white/75 border-b border-gray-100 sticky top-0 z-50 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Brand */}
@@ -18,7 +18,7 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {["Home", "For Clients", "For Consultants", "How it Works"].map((item) => (
+            {["Home", "For Clients", "For Consultants"].map((item) => (
               <a key={item} href="#" className="text-gray-600 hover:text-gray-900">
                 {item}
               </a>
@@ -84,7 +84,7 @@ const Header = () => {
               </div>
 
               <nav className="flex-1 px-4 space-y-4">
-                {["Home", "For Clients", "For Consultants", "How it Works"].map((item) => (
+                {["Home", "For Clients", "For Consultants"].map((item) => (
                   <a
                     key={item}
                     href="#"
